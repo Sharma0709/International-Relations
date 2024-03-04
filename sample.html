@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+      body {
+    background-color: #eaeaea;
+    
+}
+
+.container-1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Make container responsive */
+    max-width: 1000px; /* Limit max width */
+    height: 60vh; /* Make container responsive */
+    padding: 5%; /* Make container responsive */
+    background-color: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    /* overflow: hidden; */
+}
+
+#slide-1 {
+    width: max-content;
+    margin-top: 5%; /* Make space between slide and container responsive */
+}
+
+.item-1 {
+    width: 20%; /* Make item responsive */
+    height: 300px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+}
+
+.item-1:nth-child(1),
+.item-1:nth-child(2) {
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+}
+
+.item-1:nth-child(3) {
+    left: 50%;
+}
+
+.item-1:nth-child(4) {
+    left: calc(50% + 220px);
+}
+
+.item-1:nth-child(5) {
+    left: calc(50% + 440px);
+}
+
+.item-1:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+.item-1 .content-1 {
+    position: absolute;
+    top: 50%;
+    left: 15%; /* Adjust left positioning */
+    width: 70%; /* Adjust width for responsiveness */
+    text-align: left;
+    padding: 20px; /* Add padding for better readability */
+    color: #eee;
+    transform: translate(0, -50%);
+    display: none;
+    font-family: system-ui;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background blur effect */
+    backdrop-filter: blur(-4px); /* Add background blur effect */
+}
+
+.item-1:nth-child(2) .content-1 {
+    display: block;
+    z-index: 11111;
+}
+
+.item-1 .name,
+.item-1 .des,
+.item-1 button {
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+}
+
+.item-1 .name {
+    font-size: 2em; /* Adjust font size */
+    font-weight: bold;
+}
+
+.item-1 .des {
+    margin: 20px 0;
+}
+
+.item-1 button {
+    padding: 10px 20px;
+    border: none;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 5%; /* Make space between buttons and container responsive */
+    z-index: 222222;
+    text-align: center;
+    width: 100%;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: 0.5s;
+}
+
+.buttons button:hover {
+    background-color: #bac383;
+}
+
+@keyframes showcontent {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div id="slide-1">
+            <div class="item-1" style="background-image: url(./assets/images/Carousel/IR.jpg);">
+                <div class="content-1">
+                  <div class="blur-background"></div>
+                    <div class="name">International Relations</div>
+                    <div class="des">Come embrace your journey in KJC</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item-1" style="background-image: url(./assets/images/Carousel/clg_history.jpg);">
+                <div class="content-1">
+                  <div class="blur-background"></div>
+                    <div class="name">NAAC A++</div>
+                    <div class="des">KJC is Awarded NAAC A++ Accredition</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item-1" style="background-image: url(./assets/images/Carousel/Unanswered.jpg);">
+                <div class="content-1">
+                  <div class="blur-background"></div>
+                    <div class="name">Green Campus</div>
+                    <div class="des">The best NEAT and Clean Campus</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item-1" style="background-image: url(./assets/images/Carousel/IR1.jpg);">
+                <div class="content-1">
+                    <div class="name">Leading Partners</div>
+                    <div class="des">We have more than 40 collaborations</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item-1" style="background-image: url(./assets/images/Carousel/Every-Brick-Library.jpg);">
+                <div class="content-1">
+                    <div class="name">Best Libraries</div>
+                    <div class="des">KJC has total of 3 loaded libraries</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item-1" style="background-image: url(./assets/images/Carousel/Sports.jpg);">
+                <div class="content-1">
+                    <div class="name">Best Sports Oppurtunity</div>
+                    <div class="des">In KJC you can top the charts in any field</div>
+                    <button>See more</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div> -->
+    </div>
+
+    <script>
+      // Function to move to the next slide
+      function moveToNextSlide() {
+          let lists = document.querySelectorAll('.item-1');
+          document.getElementById('slide-1').appendChild(lists[0]);
+      }
+  
+      // Function to move to the previous slide
+      function moveToPrevSlide() {
+          let lists = document.querySelectorAll('.item-1');
+          document.getElementById('slide-1').prepend(lists[lists.length - 1]);
+      }
+  
+      // Auto-slide functionality
+      let autoSlideInterval; // Variable to store the interval ID
+  
+      function startAutoSlide() {
+          autoSlideInterval = setInterval(moveToNextSlide, 3000); // Change 3000 to your desired interval in milliseconds (e.g., 5000 for 5 seconds)
+      }
+  
+      function stopAutoSlide() {
+          clearInterval(autoSlideInterval);
+      }
+  
+      // Start auto-sliding when the page loads
+      window.onload = function() {
+          startAutoSlide();
+      };
+  
+      // Stop auto-sliding when mouse hovers over the carousel
+      document.getElementById('carousel').onmouseover = function() {
+          stopAutoSlide();
+      };
+  
+      // Resume auto-sliding when mouse leaves the carousel
+      document.getElementById('carousel').onmouseleave = function() {
+          startAutoSlide();
+      };
+  
+      // Manual navigation buttons
+      document.getElementById('next').onclick = function() {
+          moveToNextSlide();
+      };
+  
+      document.getElementById('prev').onclick = function() {
+          moveToPrevSlide();
+      };
+  </script>
+  
+</body>
+</html>
+  

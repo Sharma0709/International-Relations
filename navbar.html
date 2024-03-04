@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  z-index: 1; /* Ensure dropdown stays above other content */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+.admission-dropdown {
+  position: relative; /* Needed for proper positioning of inner navbar */
+}
+
+.admission-dropdown:hover ul {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  z-index: 1; /* Ensure inner navbar stays above other content */
+}
+
+.header-nav {
+    .nav-item {
+      z-index: 999;
+
+      ul {
+        li {
+          float: left;
+          font-family: $mouse-500;
+          font-size: 10px;
+          padding: 30px;
+
+          @media screen and (max-width: 953px) {
+            padding: 30px 8px;
+          }
+
+          @media screen and (max-width: 916px) {
+            padding: 30px 8px;
+          }
+
+          @media screen and (max-width: 767px) {
+            float: none;
+            padding: 30px 8px;
+            border-top: 1px solid #ccc;
+          }
+        }
+      }
+    }
+
+    .nav-img {
+      img {
+        width: 220px;
+        height: 50px;
+        padding: 3px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .scroll-to-fixed-fixed {
+    background-color: #fff;
+    @include shado-1();
+  }
+}
+
+.small-menu {
+  float: right;
+  color: #99cc43;
+  font-size: 32px;
+  margin-top: 23px;
+  margin-right: 12px;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="sticky-nav">
+        <ul class="header-nav">
+          <li class="nav-item">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li class="dropdown"> <a href="#">Courses</a> <ul class="dropdown-menu"> <li><a href="#">Bachelors</a></li>
+                  <li><a href="#">Masters</a></li>
+                </ul>
+              </li>
+              <li class="admission-dropdown"> <a href="#">Admissions</a> <ul class="dropdown-menu"> <li><a href="#">Undergraduate</a></li>
+                  <li><a href="#">Graduate</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-img">
+            <img src="logo.png" alt="Logo">
+          </li>
+        </ul>
+      </nav>
+    </header> 
+</body>
+</html>
